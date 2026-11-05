@@ -40,7 +40,72 @@ Processes the paperwork trail from requisition through PO through payment author
 5. On invoice arrival, run the three-way match; approve within tolerance, or hold and route the specific variance type (price to the buyer, quantity to receiving/warehouse) to the right owner.
 6. Close and archive the PO packet (requisition, PO, receiving report, invoice, approval) as the audit trail once payment clears.
 7. On a fixed cadence, audit open blanket POs' drawdown-to-date against elapsed-term share and flag any running ahead of pace.
+## Purchasing Request Review Workflow
 
+### 1. Missing Information Check
+
+When receiving a purchase requisition:
+
+1. Check whether the following information is provided:
+   - Request ID
+   - Requester name
+   - Goods or services description
+   - Quantity
+   - Estimated budget
+   - Business purpose
+   - Required delivery date
+
+2. Identify missing or unclear information.
+3. Compare the request with the company's required documentation.
+4. Create a list of questions that need clarification.
+5. Never assume or invent missing information.
+
+### 2. Reviewer Identification
+
+Use the company's approval procedure and responsible roles list.
+
+1. Identify the purchase category.
+2. Check the applicable approval requirements.
+3. Match the request with the responsible reviewer role.
+4. Explain why this reviewer is appropriate.
+5. If the reviewer cannot be identified, flag the issue for human review.
+
+Never invent employee names, responsibilities or approval rules.
+
+### 3. Draft Message Generation
+
+After analyzing the purchase request:
+
+1. Prepare a professional message for the recommended reviewer.
+2. Include a short summary of the purchase request.
+3. Mention missing information.
+4. Explain what needs to be reviewed.
+5. Use a clear and professional business tone.
+
+The output must include:
+
+- Recipient role
+- Email subject
+- Message body
+
+### 4. Final Output Format
+
+Always provide:
+
+1. Purchase Request Summary
+2. Missing Information
+3. Approval Procedure Check
+4. Recommended Reviewer
+5. Draft Message
+
+### 5. Important Restrictions
+
+- Never approve or reject a purchase.
+- Never send emails or messages.
+- Never create or transmit purchase orders.
+- Never invent missing information.
+- Always use company documents as the source of approval rules.
+- Leave all final decisions to a human.
 ## Tools & methods
 
 ERP PO module (SAP MM, Oracle Procurement, Coupa, NetSuite) for requisition-to-PO conversion and match-exception queues; vendor master change logs for callback verification; requisition aging and PO past-due reports; blanket PO drawdown trackers. See [references/playbook.md](references/playbook.md) for filled versions of the tolerance table and drawdown tracker.
